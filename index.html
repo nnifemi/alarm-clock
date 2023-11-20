@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock with Alarm</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./assets/style/index.css" media="all">
+    <script src="./assets/script/index.js" defer></script>
+</head>
+<body>
+
+<div id="clock"></div>
+
+<form id="alarmForm">
+    <label for="hour"></label>
+    <input type="text" id="hour" pattern="*\d" min="0" max="23" placeholder="HH" required>
+    
+    <label for="minute"></label>
+    <input type="text" id="minute" pattern="*\d" min="0" max="59" placeholder="MM" required>
+
+    <button type="button" onclick="setAlarm()">Set Alarm</button>
+</form>
+
+<div id="alarmStatus"></div>
+
+<audio id="alarmSound" src="./assets/audio/audio.mp3"></audio>
+</body>
+</html>
